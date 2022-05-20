@@ -1,16 +1,40 @@
 {
   "name": "expressjs-getting-started",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "A template Node.js app using ExpressJS with EJS Templating",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andytryn/expressjs-getting-started"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "express"
+  ],
+  "author": {
+    "name": "Andi Triyanto",
+    "web": "https://github.com/andytryn"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-robots": "^0.1.6",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "lodash": "^4.17.21",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.7",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.7.2"
   }
 }
