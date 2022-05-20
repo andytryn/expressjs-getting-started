@@ -8,6 +8,7 @@
 */
 const path = require('path');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const compression = require('compression')
 const express = require('express');
@@ -44,8 +45,8 @@ const app = express();
 |--------------------------------------------------------------------------
 |
 */
-// app.set('views', path.join(__dirname, 'src/views'));
-// app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'src/views'));
+app.set('view engine', 'ejs');
 
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +57,7 @@ const app = express();
 // app.locals.AUTH_CONFIG = CONFIG.AUTH;
 
 app.use(helmet());
-// app.use(logger(CONFIG.HTTP_LOG_CONFIG));
+app.use(logger(CONFIG.HTTP_LOG_CONFIG));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -72,9 +73,8 @@ app.use(methodOverride('_method'));
 |--------------------------------------------------------------------------
 |
 */
-// app.use(favicon(path.join(__dirname, 'favicon.ico')));
-// app.use('/static', express.static(path.join(__dirname, 'src/public')));
-app.use(express.static(path.join(__dirname, 'src/public')));
+app.use(favicon(path.join(__dirname, 'favicon.png')))
+app.use('/static', express.static(path.join(__dirname, 'src/public')));
 
 /*
 |--------------------------------------------------------------------------
