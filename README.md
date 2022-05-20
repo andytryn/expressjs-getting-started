@@ -17,6 +17,6 @@ Your app should now be running on [`localhost:5000`](http://localhost:5000/).
 ## Make from scratch
 
 ```sh
-$ npx express-generator expressjs-getting-started --ejs
+$ npx express-generator expressjs-getting-started --view=ejs
 ```
 note: change `expressjs-getting-started` to your name project
